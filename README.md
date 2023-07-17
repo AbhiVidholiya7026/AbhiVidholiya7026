@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @AbhiVidholiya7026
-- 👀 I’m interested in reading/Watching movies 
-- 🌱 I’m currently learning Data Science 
-- 💞️ I’m looking to collaborate on 
+- 👀 I’m interested in reading books , coding and Watching movies 
+- 🌱 I’m currently learning Data Science as Specialization 
+- 💞️ I’m looking to collaborate on certain AI projects 
 - 📫 How to reach me ...
 
 <!---
