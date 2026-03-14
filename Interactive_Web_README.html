@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abhishek Sharma — GitHub Profile README</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --accent:#6366f1;--accent2:#22d3ee;--accent3:#f59e0b;
+    --bg:#ffffff;--bg2:#f8f8f7;--bg3:#f1f0ec;
+    --text:#1a1a18;--muted:#6b6b66;
+    --border:rgba(0,0,0,0.1);
+    --card:#f8f8f7;
+    --mono:'JetBrains Mono',monospace;
+    --sans:'Sora',sans-serif;
+    --radius-md:8px;--radius-lg:12px;
+  }
+  @media(prefers-color-scheme:dark){
+    :root{
+      --bg:#1a1a18;--bg2:#222220;--bg3:#2a2a28;
+      --text:#e8e8e0;--muted:#8a8a82;
+      --border:rgba(255,255,255,0.1);
+      --card:#222220;
+    }
+  }
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:100vh;padding:2rem 1rem 3rem}
+  .readme{max-width:760px;margin:0 auto}
+  .hero{text-align:center;padding:2.5rem 1rem 1.75rem;position:relative}
+  .wave{font-size:2.6rem;display:inline-block;animation:wave 2s ease-in-out infinite}
+  @keyframes wave{0%,100%{transform:rotate(0deg)}25%{transform:rotate(20deg)}75%{transform:rotate(-10deg)}}
+  .hero h1{font-family:var(--sans);font-size:2rem;font-weight:700;color:var(--text);margin:.5rem 0 .3rem;letter-spacing:-.03em}
+  .tagline{font-size:1rem;color:var(--muted);margin-bottom:1.4rem;min-height:1.5rem}
+  .badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:.5rem}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .85rem;border-radius:999px;font-size:.76rem;font-weight:600;font-family:var(--mono);cursor:pointer;transition:transform .15s,opacity .15s;border:1px solid transparent;text-decoration:none}
+  .badge:hover{transform:translateY(-2px);opacity:.85}
+  .badge-indigo{background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+  .badge-cyan{background:#ecfeff;color:#0e7490;border-color:#a5f3fc}
+  .badge-emerald{background:#ecfdf5;color:#047857;border-color:#6ee7b7}
+  .badge-rose{background:#fff1f2;color:#be123c;border-color:#fecdd3}
+  @media(prefers-color-scheme:dark){
+    .badge-indigo{background:#1e1b4b;color:#a5b4fc;border-color:#3730a3}
+    .badge-cyan{background:#083344;color:#67e8f9;border-color:#155e75}
+    .badge-emerald{background:#022c22;color:#34d399;border-color:#065f46}
+    .badge-rose{background:#4c0519;color:#fda4af;border-color:#9f1239}
+  }
+  .divider{height:1px;background:var(--border);margin:1.5rem 0}
+  .section-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;margin-bottom:.25rem}
+  @media(max-width:520px){.about-grid{grid-template-columns:1fr}}
+  .about-item{display:flex;align-items:flex-start;gap:.55rem;padding:.55rem .7rem;background:var(--card);border-radius:var(--radius-md);border:.5px solid var(--border);font-size:.83rem;color:var(--text);line-height:1.55}
+  .about-item span:first-child{font-size:1rem;flex-shrink:0;margin-top:.05rem}
+  .about-item strong{font-weight:600;display:block;font-size:.73rem;margin-bottom:.1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+  .skills-tabs{display:flex;gap:.35rem;margin-bottom:.8rem;flex-wrap:wrap}
+  .tab{padding:.3rem .8rem;border-radius:999px;font-size:.78rem;font-weight:500;cursor:pointer;border:.5px solid var(--border);background:transparent;color:var(--muted);font-family:var(--sans);transition:all .15s}
+  .tab.active,.tab:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .skill-group{display:none;flex-wrap:wrap;gap:.4rem}
+  .skill-group.show{display:flex}
+  .skill-pill{padding:.25rem .65rem;border-radius:6px;font-size:.76rem;font-family:var(--mono);font-weight:600;background:var(--bg3);border:.5px solid var(--border);color:var(--text);cursor:default;transition:transform .1s}
+  .skill-pill:hover{transform:scale(1.07)}
+  .projects-grid{display:grid;gap:.8rem}
+  .project-card{background:var(--card);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.2rem;cursor:pointer;transition:border-color .15s,transform .15s;position:relative;overflow:hidden}
+  .project-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .project-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .15s}
+  .project-card:hover::before{opacity:1}
+  .p-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.45rem}
+  .p-name{font-size:.93rem;font-weight:600;color:var(--text)}
+  .p-tag{font-size:.7rem;padding:.15rem .5rem;border-radius:999px;background:#eef2ff;color:#4338ca;font-weight:600;font-family:var(--mono)}
+  @media(prefers-color-scheme:dark){.p-tag{background:#1e1b4b;color:#a5b4fc}}
+  .p-desc{font-size:.83rem;color:var(--muted);line-height:1.58;margin-bottom:.65rem}
+  .p-stack{display:flex;flex-wrap:wrap;gap:.3rem}
+  .p-tech{font-size:.71rem;font-family:var(--mono);padding:.15rem .48rem;border-radius:5px;background:var(--bg);border:.5px solid var(--border);color:var(--muted)}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
+  .stat-card{background:var(--card);border:.5px solid var(--border);border-radius:10px;padding:.9rem .75rem;text-align:center}
+  .stat-num{font-size:1.5rem;font-weight:700;font-family:var(--mono);color:var(--accent);display:block}
+  .stat-lbl{font-size:.73rem;color:var(--muted);margin-top:.2rem}
+  .contact-row{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+  @media(max-width:520px){.contact-row{grid-template-columns:1fr}}
+  .contact-card{display:flex;align-items:center;gap:.65rem;padding:.7rem 1rem;background:var(--card);border:.5px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,transform .15s;font-size:.83rem;color:var(--text);text-decoration:none}
+  .contact-card:hover{border-color:var(--accent2);transform:translateY(-2px)}
+  .cicon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+  .ci-mail{background:#fef3c7}
+  .ci-gh{background:#f0f9ff}
+  .ci-li{background:#eff6ff}
+  .ci-phone{background:#f0fdf4}
+  @media(prefers-color-scheme:dark){
+    .ci-mail{background:#451a03}.ci-gh{background:#0c2a4a}
+    .ci-li{background:#0c2340}.ci-phone{background:#052e16}
+  }
+  .add-section{border:1px dashed var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;color:var(--muted);font-size:.83rem;cursor:pointer;transition:border-color .15s,color .15s}
+  .add-section:hover{border-color:var(--accent);color:var(--accent)}
+  .footer{text-align:center;font-size:.76rem;color:var(--muted);margin-top:1.75rem;font-family:var(--mono)}
+  .typing{display:inline-block}
+  .cursor{display:inline-block;width:2px;height:1em;background:var(--accent);animation:blink .7s infinite;vertical-align:text-bottom;margin-left:2px}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .toggle-track{position:relative;width:32px;height:18px;background:var(--border);border-radius:9px;transition:background .2s;display:inline-block}
+  .toggle-track:has(input:checked){background:var(--accent)}
+  #heat-toggle:checked + span{transform:translateX(14px)}
+</style>
+</head>
+<body>
+<div class="readme">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wave">👋</div>
+    <h1>Abhishek Sharma</h1>
+    <p class="tagline"><span class="typing" id="typed"></span><span class="cursor"></span></p>
+    <div class="badges">
+      <span class="badge badge-indigo">🎓 B.Tech CSE · Data Science</span>
+      <span class="badge badge-cyan">💡 Open to Collaborate</span>
+      <span class="badge badge-emerald">📍 India</span>
+      <span class="badge badge-rose">⚽ Football Fan</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <div class="section-label">About me</div>
+  <div class="about-grid">
+    <div class="about-item"><span>🎓</span><div><strong>Education</strong>B.Tech CSE (Data Science), Amity University MP · 2021–2025</div></div>
+    <div class="about-item"><span>💞️</span><div><strong>Looking for</strong>Collaborations with developers & orgs on impactful projects</div></div>
+    <div class="about-item"><span>🌱</span><div><strong>Currently</strong>Exploring ML, Data Engineering & Backend Development</div></div>
+    <div class="about-item"><span>⚡</span><div><strong>Interests</strong>Football · Movies · Open Source · Problem Solving</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <div class="section-label">Tech stack</div>
+  <div class="skills-tabs">
+    <button class="tab active" onclick="showTab('languages',this)">Languages</button>
+    <button class="tab" onclick="showTab('data',this)">Data &amp; ML</button>
+    <button class="tab" onclick="showTab('web',this)">Web &amp; Backend</button>
+    <button class="tab" onclick="showTab('tools',this)">Tools &amp; Cloud</button>
+  </div>
+  <div id="tab-languages" class="skill-group show">
+    <span class="skill-pill">Python</span><span class="skill-pill">Java</span><span class="skill-pill">C / C++</span><span class="skill-pill">SQL</span><span class="skill-pill">JavaScript</span>
+  </div>
+  <div id="tab-data" class="skill-group">
+    <span class="skill-pill">NumPy</span><span class="skill-pill">Pandas</span><span class="skill-pill">Scikit-learn</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Seaborn</span>
+  </div>
+  <div id="tab-web" class="skill-group">
+    <span class="skill-pill">Flask</span><span class="skill-pill">FastAPI</span><span class="skill-pill">HTML / CSS</span><span class="skill-pill">MySQL</span><span class="skill-pill">PostgreSQL</span>
+  </div>
+  <div id="tab-tools" class="skill-group">
+    <span class="skill-pill">Git &amp; GitHub</span><span class="skill-pill">Jupyter</span><span class="skill-pill">VS Code</span><span class="skill-pill">Docker</span><span class="skill-pill">Linux</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <div class="section-label">Featured projects</div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="p-header">
+        <span class="p-name">🔍 Project Name · Add yours here</span>
+        <span class="p-tag">ML</span>
+      </div>
+      <p class="p-desc">A brief one-line description of what this project does and the problem it solves. Replace this with your real project.</p>
+      <div class="p-stack">
+        <span class="p-tech">Python</span><span class="p-tech">Scikit-learn</span><span class="p-tech">Pandas</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="p-header">
+        <span class="p-name">🚀 Project Name · Add yours here</span>
+        <span class="p-tag">API</span>
+      </div>
+      <p class="p-desc">A brief one-line description of what this project does and the problem it solves. Replace this with your real project.</p>
+      <div class="p-stack">
+        <span class="p-tech">Flask</span><span class="p-tech">PostgreSQL</span><span class="p-tech">Docker</span>
+      </div>
+    </div>
+    <div class="add-section">＋ Add another project</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STATS -->
+  <div class="section-label">GitHub activity</div>
+  <div class="stats-row">
+    <div class="stat-card"><span class="stat-num" id="s1">0</span><div class="stat-lbl">Repositories</div></div>
+    <div class="stat-card"><span class="stat-num" id="s2">0</span><div class="stat-lbl">Contributions</div></div>
+    <div class="stat-card"><span class="stat-num" id="s3">0</span><div class="stat-lbl">Stars earned</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <div class="section-label">Get in touch</div>
+  <div class="contact-row">
+    <a class="contact-card" href="mailto:abhishekvidholiya7026@gmail.com">
+      <div class="cicon ci-mail">📧</div>
+      <div><div style="font-weight:600;font-size:.82rem">Email</div><div style="font-size:.73rem;color:var(--muted)">abhishekvidholiya7026@gmail.com</div></div>
+    </a>
+    <a class="contact-card" href="https://github.com/YOUR_USERNAME" target="_blank">
+      <div class="cicon ci-gh">🐙</div>
+      <div><div style="font-weight:600;font-size:.82rem">GitHub</div><div style="font-size:.73rem;color:var(--muted)">github.com/yourusername</div></div>
+    </a>
+    <a class="contact-card" href="https://linkedin.com/in/YOUR_HANDLE" target="_blank">
+      <div class="cicon ci-li">💼</div>
+      <div><div style="font-weight:600;font-size:.82rem">LinkedIn</div><div style="font-size:.73rem;color:var(--muted)">linkedin.com/in/yourhandle</div></div>
+    </a>
+    <a class="contact-card" href="tel:+919125320091">
+      <div class="cicon ci-phone">📞</div>
+      <div><div style="font-weight:600;font-size:.82rem">Phone</div><div style="font-size:.73rem;color:var(--muted)">+91 91253 20091</div></div>
+    </a>
+  </div>
+
+  <div class="footer" style="margin-top:1.5rem">⭐ Star a repo · 🍴 Fork &amp; collaborate · 🌟 Always aiming high</div>
+</div>
+
+<script>
+const lines=["Software Developer","Data Science Graduate","Open to Collaborations","Football · Code · Movies"];
+let li=0,ci=0,del=false;
+const el=document.getElementById('typed');
+function type(){
+  const cur=lines[li];
+  if(!del){el.textContent=cur.slice(0,++ci);if(ci===cur.length){del=true;setTimeout(type,1600);return;}}
+  else{el.textContent=cur.slice(0,--ci);if(ci===0){del=false;li=(li+1)%lines.length;}}
+  setTimeout(type,del?45:80);
+}
+type();
+
+function showTab(id,btn){
+  document.querySelectorAll('.skill-group').forEach(g=>g.classList.remove('show'));
+  document.getElementById('tab-'+id).classList.add('show');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function counter(id,target,dur){
+  let s=0,step=target/60;
+  const el=document.getElementById(id);
+  const t=setInterval(()=>{s=Math.min(s+step,target);el.textContent=Math.round(s)+(id==='s2'?'+':'');if(s>=target)clearInterval(t);},dur/60);
+}
+setTimeout(()=>{counter('s1',12,800);counter('s2',150,900);counter('s3',8,700);},400);
+</script>
+</body>
+</html>
